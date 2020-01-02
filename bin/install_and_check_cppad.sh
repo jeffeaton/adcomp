@@ -6,8 +6,8 @@ if [ ! -f ~/.R/Makevars ]; then
     echo "CXX = g++ -Wall -pedantic -Werror" > ~/.R/Makevars
 fi
 
-make cran-version
 sed -i 's/framework=c.*/framework="CppAD",/g' TMB/R/TMB.R
+make cran-version
 make cran-check
 make install
 echo "library(TMB);precompile();runExample(all=TRUE)" | R --slave
