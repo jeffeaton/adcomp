@@ -28,7 +28,7 @@ jobs:
       r: 3.1
       install: true
       script:
-        - ./bin/install_and_check.sh
+        - ./bin/install_and_check_cppad.sh
 
     - stage: Install and check the package
       r: release
