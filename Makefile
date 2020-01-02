@@ -108,7 +108,7 @@ cran-version:
 	echo ".onAttach <- function(lib, pkg) {"                                                      >> TMB/R/zzz.R
 	echo "  exfolder <- system.file(\"examples\", package = \"TMB\")"                             >> TMB/R/zzz.R
 	echo "  dll <- paste0(exfolder, Sys.getenv(\"R_ARCH\"), \"/simple\", .Platform\$$dynlib.ext)" >> TMB/R/zzz.R
-	echo "  if(!file.exists(dll)) runExample(\"simple\", dontrun=TRUE)"                           >> TMB/R/zzz.R
+##	echo "  if(!file.exists(dll)) runExample(\"simple\", dontrun=TRUE)"                           >> TMB/R/zzz.R
 	echo "}"                                                                                      >> TMB/R/zzz.R
 	make eliminate-cout
 	make doc-update
