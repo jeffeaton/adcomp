@@ -956,7 +956,7 @@ openmp <- function(n=NULL){
 ##' @seealso \code{\link{precompile}}
 compile <- function(file,flags="",safebounds=TRUE,safeunload=TRUE,
                     openmp=isParallelTemplate(file[1]),libtmb=TRUE,
-                    libinit=TRUE,tracesweep=FALSE,framework=c("TMBad", "CppAD"),
+                    libinit=TRUE,tracesweep=FALSE,framework=c("CppAD"),
                     ...){
   framework <- match.arg(framework)
   if(.Platform$OS.type=="windows"){
